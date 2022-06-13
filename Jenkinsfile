@@ -3,8 +3,10 @@ pipeline {
         label 'worker'
     }
     stages {
-        step('Building') {
-            sh 'build.sh'
+        stage('Building') {
+            steps{
+                sh 'build.sh'
+            }
         }
     }
 }
